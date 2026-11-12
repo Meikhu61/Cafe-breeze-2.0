@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Breeze | Sip, Relax & Repeat — Sudama Nagar, Indore</title>
+  <meta name="description" content="Cafe Breeze in Sudama Nagar, Indore. Renowned for signature Mexican delicacies, handcrafted coffees, and relaxed ambiance. Open 9:00 AM – 11:30 PM daily." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            breeze: {
+              cream: '#FAF6EF',
+              latte: '#F3ECE0',
+              border: '#E8DCB8',
+              terracotta: '#D65A31',
+              terracottaDark: '#B8431C',
+              espresso: '#231610',
+              deep: '#150C08',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-breeze-cream text-neutral-800 font-sans antialiased selection:bg-breeze-terracotta selection:text-white">
+
+  <!-- ========================================================
+       1. MAIN PUBLIC WEBSITE
+       ======================================================== -->
+  <div id="public-site">
+    
+    <!-- Top Announcement Strip -->
+    <div class="bg-breeze-terracotta text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
+      <span>🌮 <strong>Indore’s Favorite Mexican Kitchen & Handcrafted Brews</strong></span>
+      <span class="hidden md:inline">• Open 7 Days: 9:00 AM – 11:30 PM</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-breeze-border shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex flex-col group">
+          <span class="font-serif text-2xl sm:text-3xl font-extrabold text-breeze-espresso tracking-tight group-hover:text-breeze-terracotta transition">
+            Cafe Breeze
+          </span>
+          <span class="text-[10px] tracking-[0.28em] uppercase font-bold text-breeze-terracotta -mt-1">
+            Sip, Relax & Repeat
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold text-neutral-700">
+          <a href="#mexican-special" class="hover:text-breeze-terracotta transition text-breeze-terracotta font-bold flex items-center gap-1.5">
+            <span>🌮 Mexican Specials</span>
+          </a>
+          <a href="#about" class="hover:text-breeze-terracotta transition">About</a>
+          <a href="#hours" class="hover:text-breeze-terracotta transition">Hours & Location</a>
+          <a href="#book" class="bg-breeze-espresso hover:bg-breeze-deep text-white px-5 py-2.5 rounded-full font-bold shadow-md transition transform hover:-translate-y-0.5">
+            Book Table
+          </a>
+          <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2.5 rounded-full font-bold flex items-center gap-1.5 shadow-md transition transform hover:-translate-y-0.5">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i> Swiggy
+          </a>
+          <a href="#admin" class="text-xs font-bold text-neutral-400 hover:text-breeze-espresso border border-neutral-300 hover:border-breeze-espresso px-3 py-1.5 rounded-lg transition flex items-center gap-1">
+            <i data-lucide="shield" class="w-3.5 h-3.5"></i> Admin
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-toggle" aria-label="Toggle Navigation" class="md:hidden p-2 text-breeze-espresso focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-nav" class="hidden md:hidden bg-white border-b border-breeze-border px-6 py-4 space-y-3 shadow-lg">
+        <a href="#mexican-special" class="block py-2 text-breeze-terracotta font-bold">🌮 Mexican Specials</a>
+        <a href="#about" class="block py-2 text-neutral-700 font-medium">About Cafe Breeze</a>
+        <a href="#hours" class="block py-2 text-neutral-700 font-medium">Hours & Location</a>
+        <a href="#book" class="block text-center bg-breeze-espresso text-white py-3 rounded-xl font-bold">Book a Table</a>
+        <a href="https://www.swiggy.com" target="_blank" class="block text-center bg-orange-500 text-white py-3 rounded-xl font-bold">Order on Swiggy</a>
+        <a href="#admin" class="block text-center text-xs text-neutral-500 font-bold pt-2">Staff & Admin Login</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-breeze-latte/70 via-breeze-cream to-white py-16 sm:py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-breeze-terracotta border border-breeze-border shadow-sm mb-6">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-breeze-terracotta"></i>
+            Sudama Nagar, Indore
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-breeze-espresso leading-[1.15] mb-6">
+            Sip, Relax & Repeat.
+          </h1>
+          <p class="text-base sm:text-lg text-neutral-600 mb-8 max-w-lg leading-relaxed">
+            Welcome to your neighborhood haven on Narendra Tiwari Marg. Renowned for our <strong>famous Mexican cuisine</strong>, artisanal iced pours, and comforting cafe vibes.
+          </p>
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#book" class="bg-breeze-terracotta hover:bg-breeze-terracottaDark text-white px-7 py-3.5 rounded-full font-bold shadow-lg transition flex items-center gap-2 transform hover:-translate-y-0.5">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Reserve a Table
+            </a>
+            <a href="https://wa.me/919399180445" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-breeze-latte text-breeze-espresso border border-breeze-border px-6 py-3.5 rounded-full font-bold shadow-sm transition flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Graphic Stack -->
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" alt="Cafe Breeze Cozy Interior" class="w-full h-80 sm:h-[420px] object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="bg-breeze-terracotta text-[11px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider">Visitors’ Top Favorite</span>
+              <h3 class="font-serif text-2xl font-bold mt-2">Authentic Mexican Flavors & Handcrafted Brews</h3>
+              <p class="text-xs sm:text-sm text-neutral-200 mt-1">Crispy tacos, bubbling quesadillas, loaded nachos & rich cold frappes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mexican Highlight Section -->
+    <section id="mexican-special" class="py-20 bg-white border-t border-breeze-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-breeze-terracotta">Culinary Highlight</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-breeze-espresso mt-2">What Guests Love Most: Our Mexican Kitchen</h2>
+          <p class="text-neutral-600 mt-3 text-sm sm:text-base leading-relaxed">
+            Visitors to Cafe Breeze consistently fall in love with our Mexican specials. Prepared fresh with authentic corn tortillas, smoky chipotle seasonings, fresh pico de gallo, and molten cheese blends.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Item 1 -->
+          <div class="bg-breeze-cream rounded-2xl p-6 border border-breeze-border hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="text-4xl mb-4">🌮</div>
+              <h3 class="font-serif text-xl font-bold text-breeze-espresso">Crisp & Soft Tacos</h3>
+              <p class="text-xs text-neutral-600 mt-2 leading-relaxed">Loaded with Mexican spiced pinto beans, charred sweet corn, jalapeños, and signature chipotle crema.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-breeze-border/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-breeze-terracotta uppercase">Must Try</span>
+              <span class="text-xs text-neutral-500 font-semibold">Chef's Recipe</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="bg-breeze-cream rounded-2xl p-6 border border-breeze-border hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="text-4xl mb-4">🧀</div>
+              <h3 class="font-serif text-xl font-bold text-breeze-espresso">Fiesta Quesadillas</h3>
+              <p class="text-xs text-neutral-600 mt-2 leading-relaxed">Golden toasted tortillas packed with molten mozzarella, cheddar, sautéed fajita bell peppers, and salsa roja.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-breeze-border/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-breeze-terracotta uppercase">Super Cheesy</span>
+              <span class="text-xs text-neutral-500 font-semibold">Guest Favorite</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="bg-breeze-cream rounded-2xl p-6 border border-breeze-border hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="text-4xl mb-4">🥑</div>
+              <h3 class="font-serif text-xl font-bold text-breeze-espresso">Grande Nacho Platter</h3>
+              <p class="text-xs text-neutral-600 mt-2 leading-relaxed">Crunchy stone-ground tortilla chips drenched in warm nacho queso, refried beans, guacamole, and pickled jalapeños.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-breeze-border/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-breeze-terracotta uppercase">Sharing Size</span>
+              <span class="text-xs text-neutral-500 font-semibold">Crowd Pleaser</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="bg-breeze-cream rounded-2xl p-6 border border-breeze-border hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="text-4xl mb-4">🌯</div>
+              <h3 class="font-serif text-xl font-bold text-breeze-espresso">Sizzling Burrito Bowl</h3>
+              <p class="text-xs text-neutral-600 mt-2 leading-relaxed">Herb-infused cilantro-lime rice topped with spiced beans, fajita veggies, salsa, and rich sour cream.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-breeze-border/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-breeze-terracotta uppercase">Wholesome</span>
+              <span class="text-xs text-neutral-500 font-semibold">Full Meal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-orange-500 hover:bg-orange-600 text-white px-8 py-3.5 rounded-full font-bold shadow-lg transition transform hover:-translate-y-0.5">
+            <i data-lucide="truck" class="w-5 h-5"></i>
+            Order Cafe Breeze on Swiggy
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Booking Form Section -->
+    <section id="book" class="py-20 bg-breeze-latte/50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-breeze-border">
+          <div class="text-center max-w-lg mx-auto mb-10">
+            <span class="text-xs uppercase font-extrabold tracking-widest text-breeze-terracotta">Table Reservations</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-breeze-espresso mt-1">Book Your Table</h2>
+            <p class="text-sm text-neutral-600 mt-2">
+              Reserve your spot for birthdays, romantic evenings, or friendly catch-ups. Your reservation is registered instantly.
+            </p>
+          </div>
+
+          <!-- Alert message box -->
+          <div id="booking-alert" class="hidden mb-6 p-4 rounded-2xl text-sm font-medium"></div>
+
+          <form id="booking-form" class="space-y-6">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <!-- Name -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">Full Name *</label>
+                <input type="text" id="cust-name" required placeholder="Aarav Sharma" class="w-full bg-breeze-cream border border-breeze-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta transition" />
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">WhatsApp / Phone *</label>
+                <input type="tel" id="cust-phone" required placeholder="093991 80445" class="w-full bg-breeze-cream border border-breeze-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta transition" />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">Email Address *</label>
+                <input type="email" id="cust-email" required placeholder="aarav@example.com" class="w-full bg-breeze-cream border border-breeze-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta transition" />
+              </div>
+
+              <!-- Guests -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">Number of Guests *</label>
+                <select id="cust-guests" class="w-full bg-breeze-cream border border-breeze-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta transition">
+                  <option value="1 Guest">1 Guest</option>
+                  <option value="2 Guests" selected>2 Guests</option>
+                  <option value="3-4 Guests">3 - 4 Guests</option>
+                  <option value="5-8 Guests">5 - 8 Guests</option>
+                  <option value="8+ Large Party">8+ Large Party</option>
+                </select>
+              </div>
+
+              <!-- Date -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">Reservation Date *</label>
+                <input type="date" id="cust-date" required class="w-full bg-breeze-cream border border-breeze-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta transition" />
+              </div>
+
+              <!-- Time Slot -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">Time Slot *</label>
+                <input type="time" id="cust-time" required class="w-full bg-breeze-cream border border-breeze-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta transition" />
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">Special Requests (Optional)</label>
+              <textarea id="cust-notes" rows="3" placeholder="Birthday surprise, outdoor seating, quiet corner, dietary requests..." class="w-full bg-breeze-cream border border-breeze-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta transition"></textarea>
+            </div>
+
+            <button type="submit" id="booking-submit-btn" class="w-full bg-breeze-espresso hover:bg-breeze-deep text-white font-bold py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5"></i> Confirm Table Reservation
+            </button>
+            <p class="text-xs text-center text-neutral-500">
+              Need urgent confirmation? Call or WhatsApp us directly at <a href="tel:09399180445" class="text-breeze-terracotta font-bold underline">093991 80445</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours, Location & Holiday Notice -->
+    <section id="hours" class="py-20 bg-white border-t border-breeze-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-8">
+          
+          <!-- Hours & Holiday Card -->
+          <div class="bg-breeze-cream p-8 rounded-3xl border border-breeze-border flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-breeze-border flex items-center justify-center text-breeze-espresso mb-4">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-breeze-espresso mb-2">Business Hours</h3>
+              <p class="text-sm text-neutral-600 mb-4">Open every single day of the week to welcome you.</p>
+
+              <div class="py-3 border-y border-breeze-border text-sm flex justify-between items-center">
+                <span class="font-semibold text-neutral-700">Monday – Sunday</span>
+                <span class="font-bold text-breeze-terracotta">9:00 AM – 11:30 PM</span>
+              </div>
+
+              <!-- Holiday Notice as specified -->
+              <div class="mt-5 p-4 rounded-2xl bg-amber-50 border border-amber-300 text-amber-900 text-xs leading-relaxed">
+                <div class="font-bold flex items-center gap-1.5 mb-1 text-amber-950">
+                  <i data-lucide="alert-circle" class="w-4 h-4 text-amber-600"></i> Festive & Special Day Notice:
+                </div>
+                Operating hours might differ on <strong>Diwali</strong> and <strong>Tribal Pride Day</strong>. Please check our WhatsApp or Instagram updates on those specific dates.
+              </div>
+            </div>
+          </div>
+
+          <!-- Location & Contact -->
+          <div class="bg-breeze-cream p-8 rounded-3xl border border-breeze-border flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-breeze-border flex items-center justify-center text-breeze-espresso mb-4">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-breeze-espresso mb-2">Find Cafe Breeze</h3>
+              <address class="not-italic text-sm text-neutral-600 leading-relaxed mb-6">
+                <strong>Cafe Breeze</strong><br>
+                726-A, Ganesh Dwar, Narendra Tiwari Marg,<br>
+                Sudama Nagar, Indore, Madhya Pradesh 452009
+              </address>
+              
+              <div class="space-y-2 text-sm">
+                <p><strong>Call / WhatsApp:</strong> <a href="tel:09399180445" class="text-breeze-terracotta underline font-semibold">093991 80445</a></p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/cafebreeze._" target="_blank" rel="noopener noreferrer" class="text-breeze-terracotta underline font-semibold">@cafebreeze._</a></p>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=726-A,Ganesh+Dwar,Narendra+Tiwari+Marg,Sudama+Nagar,Indore,Madhya+Pradesh+452009" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center justify-center gap-2 w-full bg-breeze-espresso text-white py-3.5 rounded-xl text-sm font-bold hover:bg-breeze-deep transition">
+              <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions (Google Maps)
+            </a>
+          </div>
+
+          <!-- Swiggy Delivery & Community -->
+          <div class="bg-breeze-espresso text-white p-8 rounded-3xl flex flex-col justify-between shadow-xl">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-neutral-800 flex items-center justify-center text-breeze-terracotta mb-4">
+                <i data-lucide="coffee" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold mb-2">Delivery & Community</h3>
+              <p class="text-sm text-neutral-300 mb-6">Want hot burritos, crunchy tacos, and cold frappes delivered straight to your home?</p>
+
+              <div class="space-y-3.5">
+                <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3.5 rounded-xl transition shadow">
+                  Order Now on Swiggy
+                </a>
+                <a href="https://instagram.com/cafebreeze._" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white font-bold py-3.5 rounded-xl transition shadow">
+                  Follow @cafebreeze._ on Instagram
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-neutral-700 text-xs text-neutral-400">
+              Sip, Relax & Repeat in Sudama Nagar, Indore.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-breeze-deep text-neutral-300 py-12 border-t border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div>
+          <span class="font-serif text-2xl font-bold text-white">Cafe Breeze</span>
+          <p class="text-xs text-neutral-400 mt-1">Sip, Relax & Repeat • Indore, Madhya Pradesh</p>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#admin" class="text-breeze-terracotta hover:underline font-bold text-xs border border-breeze-terracotta/40 px-3 py-1.5 rounded-lg">Admin Interface</a>
+          <a href="https://wa.me/919399180445" class="hover:text-white transition">WhatsApp</a>
+          <a href="https://instagram.com/cafebreeze._" target="_blank" class="hover:text-white transition">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========================================================
+       2. ADMIN INTERFACE (Zero Database Config Required)
+       ======================================================== -->
+  <div id="admin-site" class="hidden min-h-screen bg-neutral-100">
+    
+    <!-- Admin Top Navbar -->
+    <header class="bg-white border-b border-neutral-200 sticky top-0 z-30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="bg-breeze-espresso text-white px-2.5 py-1 rounded-lg font-serif font-bold text-sm">CB</span>
+          <div>
+            <h1 class="text-sm font-bold text-neutral-900">Cafe Breeze • Admin Dashboard</h1>
+            <p id="admin-session-text" class="text-[11px] text-neutral-500">Locked</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button id="admin-export-btn" class="hidden text-xs bg-neutral-200 hover:bg-neutral-300 text-neutral-800 px-3 py-2 rounded-lg font-semibold flex items-center gap-1.5 transition">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Export CSV
+          </button>
+          <button id="admin-lock-btn" class="hidden text-xs bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg font-semibold transition">
+            Lock
+          </button>
+          <a href="#" class="text-xs bg-breeze-espresso hover:bg-breeze-deep text-white px-3.5 py-2 rounded-lg font-semibold transition">
+            Back to Website
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- PIN Login Screen (Shown when locked) -->
+      <div id="admin-pin-screen" class="max-w-sm mx-auto bg-white p-8 rounded-3xl shadow-lg border border-neutral-200 my-16 text-center">
+        <div class="w-12 h-12 bg-breeze-cream text-breeze-espresso rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-inner">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h2 class="font-serif text-2xl font-bold text-breeze-espresso">Admin Verification</h2>
+        <p class="text-xs text-neutral-500 mt-1 mb-6">Enter PIN to access all guest bookings. (Default PIN: <strong>1234</strong>)</p>
+
+        <form id="admin-pin-form" class="space-y-4">
+          <input type="password" id="admin-pin-input" maxlength="8" placeholder="Enter PIN" required class="w-full text-center tracking-widest text-lg font-bold bg-neutral-50 border border-neutral-300 rounded-xl py-3 focus:outline-none focus:ring-2 focus:ring-breeze-terracotta" />
+          <button type="submit" class="w-full bg-breeze-espresso hover:bg-breeze-deep text-white font-bold py-3 rounded-xl text-sm transition shadow">
+            Unlock Dashboard
+          </button>
+          <p id="pin-error-text" class="hidden text-xs text-red-600 font-bold">Incorrect PIN. Try 1234</p>
+        </form>
+      </div>
+
+      <!-- Dashboard View (Shown when unlocked) -->
+      <div id="admin-dashboard-view" class="hidden space-y-6">
+        
+        <!-- Tab Navigation: Bookings vs Email Settings -->
+        <div class="flex items-center justify-between border-b border-neutral-200 pb-3">
+          <div class="flex space-x-4">
+            <button id="tab-bookings-btn" class="text-sm font-bold pb-2 text-breeze-terracotta border-b-2 border-breeze-terracotta">
+              Reservations Table
+            </button>
+            <button id="tab-settings-btn" class="text-sm font-bold pb-2 text-neutral-500 hover:text-neutral-800">
+              Email Notification Settings
+            </button>
+          </div>
+          <span class="text-xs text-neutral-400">Cafe Breeze Management</span>
+        </div>
+
+        <!-- TAB 1: RESERVATIONS TABLE -->
+        <div id="view-tab-bookings" class="space-y-6">
+          <!-- Summary Counters -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div class="bg-white p-5 rounded-2xl border border-neutral-200 shadow-sm">
+              <span class="text-xs font-bold text-neutral-500 uppercase tracking-wider">Total Bookings</span>
+              <p id="stat-count-total" class="text-3xl font-extrabold text-neutral-900 mt-1">0</p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-neutral-200 shadow-sm">
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Pending Confirmation</span>
+              <p id="stat-count-pending" class="text-3xl font-extrabold text-amber-600 mt-1">0</p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-neutral-200 shadow-sm">
+              <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Confirmed Guests</span>
+              <p id="stat-count-confirmed" class="text-3xl font-extrabold text-emerald-600 mt-1">0</p>
+            </div>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="bg-white p-4 rounded-2xl border border-neutral-200 flex flex-wrap gap-4 items-center justify-between">
+            <div class="flex items-center gap-2 flex-1 min-w-[240px]">
+              <i data-lucide="search" class="w-4 h-4 text-neutral-400"></i>
+              <input type="text" id="admin-search-input" placeholder="Search by guest name, phone, or date..." class="w-full text-sm outline-none bg-transparent" />
+            </div>
+            <div class="flex items-center gap-3">
+              <label class="text-xs font-bold text-neutral-500 uppercase">Status:</label>
+              <select id="admin-filter-status" class="bg-neutral-50 border border-neutral-200 rounded-lg text-xs font-semibold px-3 py-1.5 focus:outline-none">
+                <option value="ALL">All Reservations</option>
+                <option value="pending">Pending</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+              <button id="add-test-booking-btn" class="text-xs text-neutral-500 hover:text-breeze-espresso border border-neutral-200 px-2 py-1.5 rounded-lg" title="Add a quick test booking">
+                + Test Row
+              </button>
+            </div>
+          </div>
+
+          <!-- Bookings Table -->
+          <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-neutral-50 border-b border-neutral-200 text-neutral-600 uppercase text-[11px] font-bold tracking-wider">
+                  <tr>
+                    <th class="py-3.5 px-4">Guest Info</th>
+                    <th class="py-3.5 px-4">Date & Time</th>
+                    <th class="py-3.5 px-4">Party Size</th>
+                    <th class="py-3.5 px-4">Notes</th>
+                    <th class="py-3.5 px-4">Status</th>
+                    <th class="py-3.5 px-4 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-table-body" class="divide-y divide-neutral-100 font-medium">
+                  <!-- Dynamically rendered -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: EMAIL NOTIFICATION SETTINGS -->
+        <div id="view-tab-settings" class="hidden max-w-xl bg-white p-8 rounded-3xl border border-neutral-200 shadow-sm space-y-6">
+          <div>
+            <h3 class="text-lg font-bold text-breeze-espresso">Owner Email Notifications</h3>
+            <p class="text-xs text-neutral-500 mt-1">
+              Enter your email address below. Every time someone books a table, an automatic notification will be forwarded directly to your inbox.
+            </p>
+          </div>
+
+          <form id="email-settings-form" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-neutral-700 mb-1">Your Notification Email</label>
+              <input type="email" id="owner-email-input" required placeholder="owner@cafebreeze.com" class="w-full bg-neutral-50 border border-neutral-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-breeze-terracotta" />
+              <p class="text-[11px] text-neutral-400 mt-1">FormSubmit will send a one-time activation confirmation to this email on the first booking.</p>
+            </div>
+            <button type="submit" class="bg-breeze-espresso hover:bg-breeze-deep text-white font-bold px-6 py-2.5 rounded-xl text-xs transition">
+              Save Email Address
+            </button>
+            <span id="email-saved-confirm" class="hidden text-xs text-emerald-600 font-bold ml-2">✓ Saved successfully!</span>
+          </form>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ========================================================
+       3. JAVASCRIPT: LOCAL DATA, ROUTER & NOTIFICATIONS
+       ======================================================== -->
+  <script>
+    /* ----------------------------------------------------
+       CONFIG & PERSISTENCE
+       ---------------------------------------------------- */
+    const BOOKINGS_KEY = "cafe_breeze_bookings_v2";
+    const SETTINGS_EMAIL_KEY = "cafe_breeze_owner_email";
+    const ADMIN_PASSCODE = "1234";
+
+    // Initialize owner notification email if not present
+    if (!localStorage.getItem(SETTINGS_EMAIL_KEY)) {
+      localStorage.setItem(SETTINGS_EMAIL_KEY, "your-email@example.com");
+    }
+
+    // Get bookings from browser storage
+    function loadBookings() {
+      try {
+        const raw = localStorage.getItem(BOOKINGS_KEY);
+        if (!raw) {
+          // Sample bookings to populate table immediately
+          const initialData = [
+            {
+              id: "CB-" + Date.now(),
+              name: "Pooja Sharma",
+              phone: "098260 12345",
+              email: "pooja.sharma@example.com",
+              guests: "2 Guests",
+              date: new Date().toISOString().split('T')[0],
+              time: "19:30",
+              notes: "Window corner table for anniversary",
+              status: "confirmed",
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: "CB-" + (Date.now() - 150000),
+              name: "Aman Agrawal",
+              phone: "094250 54321",
+              email: "aman.agr@example.com",
+              guests: "5-8 Guests",
+              date: new Date().toISOString().split('T')[0],
+              time: "20:00",
+              notes: "Wants loaded tacos and nachos fiesta",
+              status: "pending",
+              createdAt: new Date(Date.now() - 3600000).toISOString()
+            }
+          ];
+          localStorage.setItem(BOOKINGS_KEY, JSON.stringify(initialData));
+          return initialData;
+        }
+        return JSON.parse(raw);
+      } catch (err) {
+        return [];
+      }
+    }
+
+    function commitBookings(arr) {
+      localStorage.setItem(BOOKINGS_KEY, JSON.stringify(arr));
+    }
+
+    /* ----------------------------------------------------
+       CLIENT NAVIGATION & ROUTING
+       ---------------------------------------------------- */
+    const publicSite = document.getElementById('public-site');
+    const adminSite = document.getElementById('admin-site');
+
+    function syncRoute() {
+      if (window.location.hash === '#admin') {
+        publicSite.classList.add('hidden');
+        adminSite.classList.remove('hidden');
+      } else {
+        publicSite.classList.remove('hidden');
+        adminSite.classList.add('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    window.addEventListener('hashchange', syncRoute);
+    window.addEventListener('DOMContentLoaded', syncRoute);
+
+    // Mobile nav
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-nav').classList.toggle('hidden');
+    });
+
+    // Minimum date is today
+    const custDate = document.getElementById('cust-date');
+    if (custDate) {
+      custDate.min = new Date().toISOString().split('T')[0];
+    }
+
+    /* ----------------------------------------------------
+       BOOKING SUBMISSION & DIRECT EMAIL NOTIFICATION
+       ---------------------------------------------------- */
+    const bookingForm = document.getElementById('booking-form');
+    const bookingAlert = document.getElementById('booking-alert');
+    const bookingSubmitBtn = document.getElementById('booking-submit-btn');
+
+    bookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      bookingSubmitBtn.disabled = true;
+      bookingSubmitBtn.innerHTML = `<span>⏳ Confirming Reservation...</span>`;
+
+      const newBooking = {
+        id: "CB-" + Date.now(),
+        name: document.getElementById('cust-name').value.trim(),
+        phone: document.getElementById('cust-phone').value.trim(),
+        email: document.getElementById('cust-email').value.trim(),
+        guests: document.getElementById('cust-guests').value,
+        date: document.getElementById('cust-date').value,
+        time: document.getElementById('cust-time').value,
+        notes: document.getElementById('cust-notes').value.trim() || 'None',
+        status: 'pending',
+        createdAt: new Date().toISOString()
+      };
+
+      // 1. Save to local browser storage
+      const bookings = loadBookings();
+      bookings.unshift(newBooking);
+      commitBookings(bookings);
+
+      // 2. Dispatch email notification directly to owner's saved email via FormSubmit AJAX
+      const ownerEmail = localStorage.getItem(SETTINGS_EMAIL_KEY);
+      if (ownerEmail && ownerEmail !== "your-email@example.com") {
+        try {
+          await fetch(`https://formsubmit.co/ajax/${ownerEmail}`, {
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              _subject: `New Table Booking at Cafe Breeze - ${newBooking.name}`,
+              Guest_Name: newBooking.name,
+              Phone_WhatsApp: newBooking.phone,
+              Email: newBooking.email,
+              Guests: newBooking.guests,
+              Date: newBooking.date,
+              Time: newBooking.time,
+              Special_Requests: newBooking.notes
+            })
+          });
+        } catch (error) {
+          console.warn("Email dispatcher notice:", error);
+        }
+      }
+
+      // Success Feedback
+      bookingAlert.className = "mb-6 p-4 rounded-2xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-300";
+      bookingAlert.innerHTML = `<strong>Booking Confirmed!</strong> Thank you ${newBooking.name}, your table reservation is saved. Our staff will see you on ${newBooking.date} at ${newBooking.time}.`;
+      bookingAlert.classList.remove('hidden');
+      bookingForm.reset();
+
+      bookingSubmitBtn.disabled = false;
+      bookingSubmitBtn.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5"></i> Confirm Table Reservation`;
+      lucide.createIcons();
+
+      refreshAdminTable();
+    });
+
+    /* ----------------------------------------------------
+       ADMIN INTERFACE (PIN AUTH & TABS)
+       ---------------------------------------------------- */
+    let isAdminUnlocked = sessionStorage.getItem("cb_admin_authed") === "true";
+
+    const pinScreen = document.getElementById('admin-pin-screen');
+    const pinForm = document.getElementById('admin-pin-form');
+    const pinInput = document.getElementById('admin-pin-input');
+    const pinError = document.getElementById('pin-error-text');
+    const dashboardView = document.getElementById('admin-dashboard-view');
+    const lockBtn = document.getElementById('admin-lock-btn');
+    const exportBtn = document.getElementById('admin-export-btn');
+    const sessionText = document.getElementById('admin-session-text');
+
+    // Tab buttons & containers
+    const tabBookingsBtn = document.getElementById('tab-bookings-btn');
+    const tabSettingsBtn = document.getElementById('tab-settings-btn');
+    const viewTabBookings = document.getElementById('view-tab-bookings');
+    const viewTabSettings = document.getElementById('view-tab-settings');
+
+    function updateAdminUI() {
+      if (isAdminUnlocked) {
+        pinScreen.classList.add('hidden');
+        dashboardView.classList.remove('hidden');
+        lockBtn.classList.remove('hidden');
+        exportBtn.classList.remove('hidden');
+        sessionText.textContent = 'Unlocked (Active Session)';
+        refreshAdminTable();
+      } else {
+        pinScreen.classList.remove('hidden');
+        dashboardView.classList.add('hidden');
+        lockBtn.classList.add('hidden');
+        exportBtn.classList.add('hidden');
+        sessionText.textContent = 'Locked';
+      }
+      lucide.createIcons();
+    }
+
+    pinForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (pinInput.value === ADMIN_PASSCODE) {
+        isAdminUnlocked = true;
+        sessionStorage.setItem("cb_admin_authed", "true");
+        pinError.classList.add('hidden');
+        pinInput.value = '';
+        updateAdminUI();
+      } else {
+        pinError.classList.remove('hidden');
+      }
+    });
+
+    lockBtn.addEventListener('click', () => {
+      isAdminUnlocked = false;
+      sessionStorage.removeItem("cb_admin_authed");
+      updateAdminUI();
+    });
+
+    // Tab switching
+    tabBookingsBtn.addEventListener('click', () => {
+      tabBookingsBtn.className = "text-sm font-bold pb-2 text-breeze-terracotta border-b-2 border-breeze-terracotta";
+      tabSettingsBtn.className = "text-sm font-bold pb-2 text-neutral-500 hover:text-neutral-800";
+      viewTabBookings.classList.remove('hidden');
+      viewTabSettings.classList.add('hidden');
+    });
+
+    tabSettingsBtn.addEventListener('click', () => {
+      tabSettingsBtn.className = "text-sm font-bold pb-2 text-breeze-terracotta border-b-2 border-breeze-terracotta";
+      tabBookingsBtn.className = "text-sm font-bold pb-2 text-neutral-500 hover:text-neutral-800";
+      viewTabSettings.classList.remove('hidden');
+      viewTabBookings.classList.add('hidden');
+      document.getElementById('owner-email-input').value = localStorage.getItem(SETTINGS_EMAIL_KEY) || '';
+    });
+
+    // Email Settings Save
+    const emailSettingsForm = document.getElementById('email-settings-form');
+    const emailSavedConfirm = document.getElementById('email-saved-confirm');
+    emailSettingsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newEmail = document.getElementById('owner-email-input').value.trim();
+      localStorage.setItem(SETTINGS_EMAIL_KEY, newEmail);
+      emailSavedConfirm.classList.remove('hidden');
+      setTimeout(() => emailSavedConfirm.classList.add('hidden'), 3000);
+    });
+
+    /* ----------------------------------------------------
+       ADMIN TABLE: SEARCH, STATUS, WHATSAPP & ACTIONS
+       ---------------------------------------------------- */
+    const adminTableBody = document.getElementById('admin-table-body');
+    const searchInput = document.getElementById('admin-search-input');
+    const filterStatus = document.getElementById('admin-filter-status');
+
+    function refreshAdminTable() {
+      const bookings = loadBookings();
+      const query = (searchInput.value || '').toLowerCase();
+      const statusFilter = filterStatus.value;
+
+      // Stats
+      document.getElementById('stat-count-total').textContent = bookings.length;
+      document.getElementById('stat-count-pending').textContent = bookings.filter(b => b.status === 'pending').length;
+      document.getElementById('stat-count-confirmed').textContent = bookings.filter(b => b.status === 'confirmed').length;
+
+      const filtered = bookings.filter(b => {
+        const matchesQuery = (b.name && b.name.toLowerCase().includes(query)) ||
+                             (b.phone && b.phone.includes(query)) ||
+                             (b.date && b.date.includes(query));
+        const matchesStatus = statusFilter === 'ALL' || b.status === statusFilter;
+        return matchesQuery && matchesStatus;
+      });
+
+      if (!filtered.length) {
+        adminTableBody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-neutral-400">No reservations found.</td></tr>`;
+        return;
+      }
+
+      adminTableBody.innerHTML = filtered.map(b => {
+        const digits = (b.phone || '').replace(/\D/g, '');
+        const waNumber = digits.startsWith('91') ? digits : '91' + digits;
+        const waText = encodeURIComponent(`Hi ${b.name}, Cafe Breeze here! We are pleased to confirm your table for ${b.guests} on ${b.date} at ${b.time}. See you soon!`);
+
+        return `
+          <tr class="hover:bg-neutral-50 transition border-b border-neutral-100">
+            <td class="py-3.5 px-4">
+              <div class="font-bold text-neutral-900">${b.name}</div>
+              <div class="text-xs text-neutral-500 flex items-center gap-2 mt-0.5">
+                <span>${b.phone}</span>
+                <a href="https://wa.me/${waNumber}?text=${waText}" target="_blank" class="text-emerald-600 hover:underline inline-flex items-center gap-1 font-semibold">
+                  <i data-lucide="message-square" class="w-3 h-3"></i> WhatsApp
+                </a>
+              </div>
+              <div class="text-[11px] text-neutral-400">${b.email}</div>
+            </td>
+            <td class="py-3.5 px-4">
+              <div class="font-semibold text-neutral-800">${b.date}</div>
+              <div class="text-xs text-neutral-500">${b.time}</div>
+            </td>
+            <td class="py-3.5 px-4 text-neutral-700">${b.guests}</td>
+            <td class="py-3.5 px-4 max-w-xs text-xs text-neutral-600 italic">"${b.notes}"</td>
+            <td class="py-3.5 px-4">
+              <select onchange="window.updateBookingStatus('${b.id}', this.value)" class="text-xs font-bold rounded-lg px-2.5 py-1.5 border outline-none cursor-pointer ${
+                b.status === 'confirmed' ? 'bg-emerald-50 text-emerald-800 border-emerald-300' :
+                b.status === 'cancelled' ? 'bg-red-50 text-red-800 border-red-300' :
+                'bg-amber-50 text-amber-800 border-amber-300'
+              }">
+                <option value="pending" ${b.status === 'pending' ? 'selected' : ''}>Pending</option>
+                <option value="confirmed" ${b.status === 'confirmed' ? 'selected' : ''}>Confirmed</option>
+                <option value="cancelled" ${b.status === 'cancelled' ? 'selected' : ''}>Cancelled</option>
+              </select>
+            </td>
+            <td class="py-3.5 px-4 text-right">
+              <button onclick="window.deleteBookingRow('${b.id}')" class="text-neutral-400 hover:text-red-600 p-1.5 rounded transition" title="Delete">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    searchInput.addEventListener('input', refreshAdminTable);
+    filterStatus.addEventListener('change', refreshAdminTable);
+
+    // Global Action Handlers
+    window.updateBookingStatus = (id, newStatus) => {
+      const bookings = loadBookings();
+      const idx = bookings.findIndex(b => b.id === id);
+      if (idx !== -1) {
+        bookings[idx].status = newStatus;
+        commitBookings(bookings);
+        refreshAdminTable();
+      }
+    };
+
+    window.deleteBookingRow = (id) => {
+      if (confirm("Delete this reservation entry?")) {
+        let bookings = loadBookings();
+        bookings = bookings.filter(b => b.id !== id);
+        commitBookings(bookings);
+        refreshAdminTable();
+      }
+    };
+
+    // Add quick test booking button
+    document.getElementById('add-test-booking-btn').addEventListener('click', () => {
+      const bookings = loadBookings();
+      bookings.unshift({
+        id: "CB-" + Date.now(),
+        name: "Test Customer " + Math.floor(Math.random() * 50 + 1),
+        phone: "093991 80445",
+        email: "test@cafebreeze.com",
+        guests: "2 Guests",
+        date: new Date().toISOString().split('T')[0],
+        time: "18:00",
+        notes: "Likes Mexican Tacos & Burritos",
+        status: "pending",
+        createdAt: new Date().toISOString()
+      });
+      commitBookings(bookings);
+      refreshAdminTable();
+    });
+
+    // CSV Export
+    exportBtn.addEventListener('click', () => {
+      const bookings = loadBookings();
+      if (!bookings.length) return alert('No bookings to export.');
+      const headers = ["ID", "Name", "Phone", "Email", "Guests", "Date", "Time", "Notes", "Status", "CreatedAt"];
+      const rows = bookings.map(b => [
+        b.id,
+        `"${b.name}"`,
+        `"${b.phone}"`,
+        `"${b.email}"`,
+        `"${b.guests}"`,
+        b.date,
+        b.time,
+        `"${(b.notes || '').replace(/"/g, '""')}"`,
+        b.status,
+        b.createdAt
+      ]);
+      const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(e => e.join(","))].join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `cafe_breeze_bookings_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    updateAdminUI();
+  </script>
+</body>
+</html>
